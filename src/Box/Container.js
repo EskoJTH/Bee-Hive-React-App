@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Container.css';
 import './InputBox.css';
 import Box from './Box.js';
-import axios from 'axios';
+//import axios from 'axios';
 import importedJson from '../data.json';
 
 
@@ -56,7 +56,7 @@ class Container extends Component {
         }
         return boxes;
     }
-
+/*
     updateSource = (id) => {
         //let element = document.getElementById(id);
         let newLoction = this.state.editedLocation;
@@ -66,7 +66,7 @@ class Container extends Component {
                 this.setState({ data: response });
             });
 
-    }
+    }*/
 
     editLocation = (event) => {
         this.setState({ editedLocation: event.target.value });
@@ -75,7 +75,7 @@ class Container extends Component {
     keyUp = (event) => {
         if (event.key === "Enter") {
             console.log("Enter Press detected");
-            this.updateSource("dataAddress");
+            //this.updateSource("dataAddress");
             return;
         }
     }

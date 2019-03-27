@@ -82,6 +82,12 @@ class Graph extends Component {
 
         //data.map((elem)=>{return elem.name})
         //type="number"
+        //domain={[new Date(2018, 5, 1).getTime(), new Date(2018 ,9 ,1).getTime()]}
+        /*ticks: {
+            callback: function(label, index, labels) {
+                return label/1000+'k';
+            }
+        }*/
         return (
             <div>
                 <LineChart
@@ -89,7 +95,7 @@ class Graph extends Component {
                     width={width * 0.8}
                     height={height * 0.8}
                     data={fileData}>
-                    <XAxis type="number" scale="time" dataKey="dateNum" domain={[new Date(2018, 5, 1).getTime(), new Date(2018 ,9 ,1).getTime()] }/>
+                    <XAxis type="number" scale="time" dataKey="dateNum" domain={[new Date(2018, 5, 1).getTime(), new Date(2018 ,9 ,1).getTime()]}/>
                     <Line dataKey={"timeStamp"} />
                     <YAxis />
                     <Line type="monotone" dataKey="NET" stroke="#0f0" dot={false}/>
@@ -109,7 +115,7 @@ class Graph extends Component {
         let actualChart = this.chart();
         return (
             <div ref={this.holder} onClick={(kissa) => this.resized()} className='GraphBoxStyle'>
-                <div style={{margin: 20}} >Currently actually quite related Graph!</div>
+                <div style={{margin: 20}} >Data sent from the beehive scale in graph</div>
                 {actualChart}
             </div>
         )
