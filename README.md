@@ -2,6 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Get this to run
 
+Bugs:
++ Graph currently breaks with chrome.
+
 ### `requirements` ###
 
 + `npm` just the package manager.
